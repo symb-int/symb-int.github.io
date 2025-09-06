@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<style>
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    :root {
+        --theme-font: "Noto Serif JP", serif;
+        --body-font: "Opens Sans", sans-serif;
+
+        --theme-font-color: rgb(56, 56, 56);
+        --body-font-color: rgb(52, 52, 52);
+
+        --padding-sm: 18px;
+        --padding-md: 40px;
+        --padding-lg: 80px;
+
+        --large-screen-padding: 80px;
+    }
+
+
+    body {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(217, 240, 221);
+        margin: 0;
+    }
+
+    nav {
+        border-bottom: 0.5px solid rgb(56, 56, 56);
+        background-color: rgb(0, 0, 0);
+        padding-left: var(--padding-sm);
+    }
+
+    nav p {
+        font-weight: 200;
+        color: aliceblue;
+    }
+
+    main {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        font-size: 100px;
+        padding: var(--padding-sm);
+    }
+
+    footer {
+        display: flex;
+        width: 100%;
+        background-color: rgb(43, 43, 43);
+        box-sizing: border-box;
+        padding: var(--padding-sm);
+    }
+
+    footer p {
+        color: aliceblue;
+        margin: 0;
+    }
+
+    hgroup {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 10vw;
+        font-family: var(--theme-font);
+        color: var(--theme-font-color);
+        opacity: 1;
+        animation: fade-in 1s ease-in;
+    }
+
+    a {
+        width: max-content;
+        border: 2px solid black;
+        padding: 6px;
+        text-decoration: none;
+        font-size: 0.16em;
+        font-family: var(--theme-font);
+        font-weight: bold;
+        color: black;
+        animation: fade-in 1s ease-in;
+        animation-delay: 2s;
+        animation-fill-mode: backwards;
+    }
+
+    #subheading {
+        font-size: 0.16em;
+        font-family: var(--theme-font);
+        display: block;
+        color: var(--body-font-color);
+        animation: fade-in 1s ease-in;
+        animation-delay: 1s;
+        animation-fill-mode: backwards;
+    }
+
+    #product-list {
+        font-size: 0.16em;
+        font-family: var(--theme-font);
+        display: block;
+        color: var(--body-font-color);
+        animation: fade-in 1s ease-in;
+        animation-delay: 1s;
+        animation-fill-mode: backwards;
+    }
+
+    @media screen and (min-width:450px) {
+
+        nav {
+            padding-left: var(--padding-md);
+        }
+
+        main {
+            width: 90%;
+            font-size: 100px;
+            padding: var(--padding-md)
+        }
+
+        footer {
+            padding: var(--padding-md);
+        }
+
+        h1 {
+            font-size: 0.4em;
+        }
+
+        #subheading {
+            font-size: 0.2em;
+        }
+    }
+
+    /* large screens */
+    @media screen and (min-width:1020px) {
+
+        nav {
+            padding-left: var(--padding-lg);
+        }
+
+        main {
+            width: 40%;
+            padding: var(--padding-lg);
+        }
+
+        footer {
+            padding: var(--padding-lg);
+        }
+
+        h1 {
+            font-size: 0.4em;
+        }
+
+        #subheading {
+            font-size: 0.2em;
+        }
+    }
+</style>
+
+
+<html>
+<!-- head -->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- noto sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    <!-- open sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<!-- body -->
+
+<body>
+
+    <nav>
+        <p>𓈌 Symbolic-Intelligence</p>
+    </nav>
+
+    <!-- main content -->
+    <main>
+        <hgroup>
+            <h1>Enterprise-scale AI, reliable and secure.</h1>
+            <p id="subheading">
+                For broad enterprise adoption, purely neural approaches like LLMs face
+                critical limitations. Models such as ChatGPT lack the intrinsic reasoning
+                capabilities and robust validation mechanisms essential for mission-critical
+                applications. We build AI systems that bridge this gap by being human-centric,
+                interpretable, and reliable by design.
+            </p>
+        </hgroup>
+
+        <ul id="product-list">
+            <li>LangDa</li>
+        </ul>
+
+        <a href="mailto:contact@symbolic-systems.com">
+            Send us an inquiry
+        </a>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <p>symbolic-systems © 2025</p>
+    </footer>
+
+</body>
+
+</html>
