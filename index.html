@@ -12,7 +12,7 @@
     }
 
     :root {
-        --theme-font: "Noto Serif JP", serif;
+        --theme-font: "Noto Sans JP", sans-serif;
         --body-font: "Opens Sans", sans-serif;
 
         --theme-font-color: rgb(56, 56, 56);
@@ -39,7 +39,8 @@
         padding-left: var(--padding-sm);
     }
 
-    nav p {
+    nav p, footer p {
+        font-family: "Noto Sans Egyptian Hieroglyphs", "sans-serif";
         font-weight: 200;
         color: aliceblue;
     }
@@ -56,6 +57,7 @@
     footer {
         display: flex;
         width: 100%;
+        font-family: var(--theme-font);
         background-color: rgb(43, 43, 43);
         box-sizing: border-box;
         padding: var(--padding-sm);
@@ -110,6 +112,9 @@
         animation: fade-in 1s ease-in;
         animation-delay: 1s;
         animation-fill-mode: backwards;
+    }
+    #contact-btn {
+        box-shadow: 10px solid gray;
     }
 
     @media screen and (min-width:450px) {
@@ -185,7 +190,7 @@
 <body>
 
     <nav>
-        <p>𓈌 Symbolic-Intelligence</p>
+        <p>𓈌 Symbolic Intelligence</p>
     </nav>
 
     <!-- main content -->
@@ -202,17 +207,27 @@
         </hgroup>
 
         <ul id="product-list">
-            <li>LangDa</li>
+            <li><b>LangDa-Clerk:</b><br>
+                Enables companies and public administrations to automate document-tasks that 
+                require niche expert-knowledge and fuzzy reasoning. 
+                Clerk is customizable and can be integrated with your existing infrastructure.
+            </li>
+            <br>
+            <li><b>LangDa-Inspector:</b><br>
+                A tool that works for highly regulated environments. 
+                Inspector allows clients to adapt to changing legal conditions 
+                and continue to fulfil regulatory requirements. 
+            </li>
         </ul>
 
-        <a href="mailto:contact@symbolic-systems.com">
+        <a id="contact-btn" href="mailto:contact@symbolic-intelligence.de">
             Send us an inquiry
         </a>
     </main>
 
     <!-- footer -->
     <footer>
-        <p>symbolic-systems © 2025</p>
+        <p>𓈌 Symbolic Intelligence © 2025</p>
     </footer>
 
 </body>
