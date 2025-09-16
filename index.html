@@ -1,204 +1,228 @@
 <!DOCTYPE html>
-
-<style>
-    @keyframes fade-in {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
-
-    :root {
-        --theme-font: "Noto Sans JP", sans-serif;
-        --body-font: "Opens Sans", sans-serif;
-
-        --theme-font-color: rgb(56, 56, 56);
-        --body-font-color: rgb(52, 52, 52);
-        --nav-and-footer-color: rgb(43, 43, 43);
-        --padding-sm: 18px;
-        --padding-md: 40px;
-        --padding-lg: 80px;
-
-        --large-screen-padding: 80px;
-    }
-
-
-    body {
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(217, 240, 221);
-        margin: 0;
-    }
-
-    nav {
-        position:sticky;
-        top: 0;
-        overflow: hidden;
-        border-bottom: 0.5px solid rgb(56, 56, 56);
-        background-color: var(--nav-and-footer-color);
-        padding-left: var(--padding-sm);
-    }
-
-    nav p, footer p {
-        font-family: "Noto Sans Egyptian Hieroglyphs", "sans-serif";
-        font-weight: 200;
-        color: aliceblue;
-    }
-
-    main {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        font-size: 100px;
-        padding: var(--padding-sm);
-    }
-
-    footer {
-        display: flex;
-        position:fixed;
-        bottom: 0;
-        width: 100%;
-        font-family: var(--theme-font);
-        /* background-color: var(--nav-and-footer-color); */
-        box-sizing: border-box;
-        /* padding: var(--padding-sm); */
-    }
-
-    footer p {
-        color: var(--body-font-color);
-        margin: 0;
-    }
-
-    hgroup {
-        width: 100%;
-    }
-
-    h1 {
-        font-size: 10vw;
-        font-family: var(--theme-font);
-        color: var(--theme-font-color);
-        opacity: 1;
-        animation: fade-in 1s ease-in;
-    }
-
-    a {
-        width: max-content;
-        border: 2px solid black;
-        padding: 6px;
-        text-decoration: none;
-        font-size: 0.16em;
-        font-family: var(--theme-font);
-        font-weight: bold;
-        color: black;
-        animation: fade-in 1s ease-in;
-        animation-delay: 2s;
-        animation-fill-mode: backwards;
-    }
-
-    #subheading {
-        font-size: 0.16em;
-        font-family: var(--theme-font);
-        display: block;
-        color: var(--body-font-color);
-        animation: fade-in 1s ease-in;
-        animation-delay: 1s;
-        animation-fill-mode: backwards;
-    }
-
-    #product-list {
-        font-size: 0.16em;
-        font-family: var(--theme-font);
-        display: block;
-        color: var(--body-font-color);
-        animation: fade-in 1s ease-in;
-        animation-delay: 1s;
-        animation-fill-mode: backwards;
-    }
-    #contact-btn {
-        box-shadow: 10px solid gray;
-    }
-
-    @media screen and (min-width:450px) {
-
-        nav {
-            padding-left: var(--padding-md);
-        }
-
-        main {
-            width: 90%;
-            font-size: 100px;
-            padding: var(--padding-md)
-        }
-
-        footer {
-            padding: var(--padding-md);
-        }
-
-        h1 {
-            font-size: 0.4em;
-        }
-
-        #subheading {
-            font-size: 0.2em;
-        }
-    }
-
-    /* large screens */
-    @media screen and (min-width:1020px) {
-
-        nav {
-            padding-left: var(--padding-lg);
-        }
-
-        main {
-            width: 40%;
-            padding: var(--padding-lg);
-        }
-
-        footer {
-            padding: var(--padding-lg);
-        }
-
-        h1 {
-            font-size: 0.4em;
-        }
-
-        #subheading {
-            font-size: 0.2em;
-        }
-    }
-</style>
-
-
-<html>
-<!-- head -->
+<html lang="de">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- noto sans -->
+    <meta charset="utf-8">
+    <title>Symbolic Intelligence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- Google Fonts with display=swap to avoid FOIT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
-    <!-- open sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Egyptian+Hieroglyphs&family=Noto+Sans+JP:wght@100..900&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
+
+    <style>
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        :root {
+            --theme-font: "Noto Sans JP", sans-serif;
+            --body-font: "Opens Sans", sans-serif;
+
+            --theme-color: rgb(217, 240, 221);
+            --theme-font-color: rgb(56, 56, 56);
+            --body-font-color: rgb(52, 52, 52);
+            --nav-and-footer-font-color: rgb(52, 52, 52);
+            --nav-and-footer-color: rgb(217, 240, 221);
+
+            --padding-sm: 18px;
+            --padding-md: 40px;
+            --padding-lg: 80px;
+
+            --large-screen-padding: 80px;
+        }
+
+        /* Base layout */
+        body {
+            min-height: 100vh;
+            min-height: 100svh;
+            /* mobile-safe viewport height */
+            display: flex;
+            flex-direction: column;
+            background-color: var(--theme-color);
+            margin: 0;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            /* stay above content */
+            overflow: hidden;
+            border-bottom: 0.5px solid rgb(56, 56, 56);
+            background-color: var(--nav-and-footer-color);
+            padding-left: var(--padding-sm);
+        }
+
+        nav p,
+        footer p {
+            font-family: "Noto Sans Egyptian Hieroglyphs", "sans-serif";
+            font-weight: 200;
+            color: var(--nav-and-footer-font-color);
+        }
+
+        main {
+            height: auto;
+            /* avoid fixed 100vh */
+            min-height: 0;
+            /* prevent flex min-height issues */
+            flex: 1 0 auto;
+            /* push footer to bottom */
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            font-size: 100px;
+            padding: var(--padding-sm);
+        }
+
+        footer {
+            display: flex;
+            width: 100%;
+            font-family: var(--theme-font);
+            box-sizing: border-box;
+            margin-top: 40px;
+            /* gewünschter Abstand zum Main */
+            padding: var(--padding-sm);
+            /* Basis-Padding für kleine Screens */
+            background-color: var(--nav-and-footer-color);
+            /* visuelle Konsistenz mit Nav */
+        }
+
+        hgroup {
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 10vw;
+            font-family: var(--theme-font);
+            color: var(--theme-font-color);
+            opacity: 1;
+            animation: fade-in 1s ease-in;
+        }
+
+        a {
+            width: max-content;
+            border: 2px solid black;
+            padding: 6px;
+            text-decoration: none;
+            font-size: 0.16em;
+            font-family: var(--theme-font);
+            font-weight: bold;
+            color: black;
+            animation: fade-in 1s ease-in;
+            animation-delay: 2s;
+            animation-fill-mode: backwards;
+        }
+
+        #subheading {
+            font-size: 0.16em;
+            font-family: var(--theme-font);
+            display: block;
+            color: var(--body-font-color);
+            animation: fade-in 1s ease-in;
+            animation-delay: 1s;
+            animation-fill-mode: backwards;
+        }
+
+        #product-list {
+            font-size: 0.16em;
+            font-family: var(--theme-font);
+            display: block;
+            color: var(--body-font-color);
+            animation: fade-in 1s ease-in;
+            animation-delay: 1s;
+            animation-fill-mode: backwards;
+        }
+
+        #contact-btn {
+            /* box-shadow syntax fix; Layout/Abstände bleiben gleich */
+            /* vorher: box-shadow: 10px solid gray; (ungültig) */
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.0);
+            /* neutraler Platzhalter, optisch identisch */
+        }
+
+        /* Accessible focus states without layout shifts */
+        a:focus-visible {
+            outline: 2px solid currentColor;
+            outline-offset: 2px;
+        }
+
+        /* Reduce motion for users who prefer less animation */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.001ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.001ms !important;
+            }
+        }
+
+        /* Breakpoints */
+        @media screen and (min-width:450px) {
+            nav {
+                padding-left: var(--padding-md);
+            }
+
+            main {
+                width: 90%;
+                font-size: 100px;
+                padding: var(--padding-md);
+            }
+
+            footer {
+                padding: var(--padding-md);
+            }
+
+            h1 {
+                font-size: 0.4em;
+            }
+
+            #subheading {
+                font-size: 0.2em;
+            }
+        }
+
+        @media screen and (min-width:1020px) {
+            nav {
+                padding-left: var(--padding-lg);
+            }
+
+            main {
+                width: 40%;
+                padding: var(--padding-lg);
+            }
+
+            footer {
+                padding: var(--padding-lg);
+            }
+
+            h1 {
+                font-size: 0.4em;
+            }
+
+            #subheading {
+                font-size: 0.2em;
+            }
+        }
+    </style>
 </head>
 
-<!-- body -->
-
 <body>
-
     <nav>
         <p>𓈌 Symbolic Intelligence</p>
     </nav>
 
-    <!-- main content -->
     <main>
         <hgroup>
             <h1>Enterprise-scale AI, reliable and secure.</h1>
@@ -213,15 +237,15 @@
 
         <ul id="product-list">
             <li><b>LangDa-Clerk:</b><br>
-                Enables companies and public administrations to automate document-tasks that 
-                require niche expert-knowledge and fuzzy reasoning. 
+                Enables companies and public administrations to automate document-tasks that
+                require niche expert-knowledge and fuzzy reasoning.
                 Clerk is customizable and can be integrated with your existing infrastructure.
             </li>
             <br>
             <li><b>LangDa-Inspector:</b><br>
-                A tool that works for highly regulated environments. 
-                Inspector allows clients to adapt to changing legal conditions 
-                and continue to fulfil regulatory requirements. 
+                A tool that works for highly regulated environments.
+                Inspector allows clients to adapt to changing legal conditions
+                and continue to fulfil regulatory requirements.
             </li>
         </ul>
 
@@ -230,11 +254,9 @@
         </a>
     </main>
 
-    <!-- footer -->
     <footer>
         <p>𓈌 Symbolic Intelligence © 2025</p>
     </footer>
-
 </body>
 
 </html>
